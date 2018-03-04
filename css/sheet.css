@@ -34,7 +34,7 @@ canvas {
 :root {
     --slant-height: 100%;
     --slant-width: 40%;
-    --right-slant-width: 70%
+    --right-slant-width: 60%
 }
 
 .left, .right {
@@ -62,7 +62,7 @@ canvas {
 }
 
 .right {
-    background: rgba(#9f2525, 0.72);
+    background: rgba(159, 37, 37, 0);
     width: var(--right-slant-width);
     float:right;
     z-index: 10;
@@ -152,4 +152,7 @@ h4 {
   width:80%;
   display: flex;
   justify-content: space-between;
+}
+.points{
+  font-size: .9vw;
 }
