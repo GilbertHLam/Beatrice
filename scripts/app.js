@@ -7,3 +7,10 @@ function goResume(){
   },
       2000);
 }
+
+function goPortfolio(){
+  $('html,body').animate({
+      scrollTop: $("#portfolio").offset().top
+  },
+      2000);
+}
