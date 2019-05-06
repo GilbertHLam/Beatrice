@@ -1,0 +1,91 @@
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav-bar {
+  width: 70vw;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.7vw;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  & a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  & a::before,
+  & a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: black;
+    content: "";
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  & a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  & a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+
+  & a:hover::before,
+  & a:hover::after,
+  & a:focus::before,
+  & a:focus::after {
+    opacity: 1;
+  }
+
+  & a:hover::before,
+  & a:focus::before {
+    left: 50%;
+    width: 90px;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+  }
+
+  & a:hover::after,
+  & a:focus::after {
+    right: 50%;
+    width: 90px;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+  }
+}
